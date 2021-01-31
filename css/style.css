@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Dosis', sans-serif;
+}
+
+/*--.webicon{
+    width: 75px;
+    opacity: 1;
+}
+.webicon:hover{
+    color: #fff;
+    opacity: 0.9;
+}--*/
+/*--- Navbar ---*/
+
+.navbar {
+    background: transparent !important;
+}
+
+.nav-menu {
+    padding: 25px;
+}
+
+.fas {
+    color: #dbc1ac;
+    transition: all .4s;
+}
+
+.menu {
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #dbc1ac;
+    transition: all .4s;
+}
+
+.menu:hover {
+    color: #4b3d32;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 23px;
+    height: 3px;
+    margin: 5px;
+    transition: all .4s;
+}
+.navbar-toggler {
+    outline: none !important;
+}
+/*--- End of Navbar ---*/
+
+/*--- Header ---*/
+
+header {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(../img/background.jpg) no-repeat center center/ cover;
+}
+
+.banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.heading {
+    animation-name: popup;
+    animation-duration: 2s;
+}
+
+.main {
+    animation-name: popup;
+    animation-duration: 2s;
+    animation-delay: .5s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes popup {
+    0%{
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/*--- End of Header ---*/
+
+/*--- About Us ---*/
+#about {
+    background: #000;
+    margin-top: 30px;
+    color: #dbc1ac;
+}
+.text {
+    font-size: 28px;
+}
+
+.about-images {
+    position: relative;
+}
+
+.about-img {
+    position: absolute;
+    width: 150px;
+    transition: all 2s ease;
+    opacity: 0.9;
+}
+.img-1 {
+    top: 0%;
+    left: 0%;
+}
+.img-2 {
+    top: 20%;
+    left: 20%;
+    z-index: 2;
+}
+.img-3 {
+    top: 0%;
+    left: 45%;
+}
+.img-4 {
+    top: 45%;
+    left: 0%;
+}
+.img-5 {
+    top: 45%;
+    left: 45%;
+}
+.about-img:hover {
+    outline: 5px solid #dbc1ac;
+    outline-offset: 5px;
+    transform: scale(1.5) rotate(20deg);
+    z-index: 30;
+    opacity: 1;
+    cursor: pointer;
+}
+.about-images:hover,
+.about-img:not(:hover) {
+    opacity: 0.9;
+}
+
+.btn {
+    color: #dbc1ac;
+    font-weight: bold;
+    border: 2px solid #634832;
+    font-size: 25px;
+    transition: all .4s;
+    outline: none !important;
+}
+
+.btn:hover{
+    color: #634832;
+    background: #dbc1ac;
+    border: 2px solid #dbc1ac;
+}
+/*--- End of About Us ---*/
+
+/*--- Tab Section ---*/
+
+.content-4 .nav {
+    justify-content: center;
+    margin: 5%;
+}
+
+.content-4 .nav-tabs {
+    margin: 2px;
+    border: none;
+    border-bottom: 0px;
+    text-align: center;
+    cursor: pointer;
+    background: #000;
+}
+
+.content-4 .tab-item {
+    text-decoration: none;
+    color: #dbc1ac;
+}
+
+.content-4 .tab-item i {
+    display: block;
+    font-size: 45px;
+    padding: 6px 27px 0px 27px;
+}
+
+.content-4 .tab-item i:hover {
+    color: #967259;
+}
+
+.content-4 .tab-item span {
+    display: inline-block;
+    padding-bottom: 16px;
+    width: 100%;
+}
+
+.content-4 .tab-item.active {
+    color: #967259;
+}
+
+.tab-content {
+    margin-bottom: 5%;
+    transition: all .4s ease;
+}
+
+/*--- End of Tab Section ---*/
+
+/*--- Video Section ---*/
+.most-liked {
+    position: relative;
+    margin-top: 25px;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    /*opacity: 0.8;*/
+}
+
+.bg-video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.most-liked .text-color {
+    color: #fff;
+}
+
+.coffee-card{
+    position: relative;
+    box-shadow: 5px 15px 50px #634832;
+    max-width: 420px;
+    transition: all 0.8s;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.coffee-header .title-text {
+    color: #000;
+}
+
+.rotate {
+    perspective: 100rem;
+}
+
+.back {
+    position: absolute;
+    top: -100%;
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+    transform: rotateY(180deg);
+    transition: top .8s opacity .4s;
+}
+
+.back-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rotate:hover .coffee-card {
+    transform: rotateY(180deg);
+}
+
+.rotate:hover .back {
+    opacity: 1;
+    top: 0;
+    user-select: auto;
+    pointer-events: auto;
+}
+
+/*--- End of Video Section ---*/
+
+/*--- Footer ---*/
+
+footer {
+    background: #000;
+    padding: 2%;
+    margin-top: 15px;
+    position: relative;
+}
+
+.text-center h4 {
+    color: #dbc1ac;
+}
+
+footer a {
+    padding: 0.3em 0.7em;
+    color: #dbc1ac;
+    transition: all .5s ease;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+footer p {
+    color: #dbc1ac;
+    font-size: 10px;
+}
+
+/*--- End of Footer ---*/
